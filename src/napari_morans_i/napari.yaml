@@ -1,0 +1,43 @@
+name: napari-morans-i
+display_name: Moran's I Spatial Autocorrelation
+# use 'hidden' to remove plugin from napari hub search results
+visibility: public
+# see https://napari.org/stable/plugins/technical_references/manifest.html#fields for valid categories
+# categories: []
+contributions:
+  commands:
+    - id: napari-morans-i.make_sample_data
+      python_name: napari_morans_i._sample_data:make_sample_data
+      title: Load sample data from Moran's I Spatial Autocorrelation
+    - id: napari-morans-i.make_container_widget
+      python_name: napari_morans_i:ImageThreshold
+      title: Make threshold Container widget
+    - id: napari-morans-i.make_magic_widget
+      python_name: napari_morans_i:threshold_magic_widget
+      title: Make threshold magic widget
+    - id: napari-morans-i.make_function_widget
+      python_name: napari_morans_i:threshold_autogenerate_widget
+      title: Make threshold function widget
+    - id: napari-morans-i.make_qwidget
+      python_name: napari_morans_i:ExampleQWidget
+      title: Make example QWidget
+  sample_data:
+    - command: napari-morans-i.make_sample_data
+      display_name: Moran's I Spatial Autocorrelation
+      key: unique_id.1
+  widgets:
+    - command: napari-morans-i.make_container_widget
+      display_name: Container Threshold
+    - command: napari-morans-i.make_magic_widget
+      display_name: Magic Threshold
+    - command: napari-morans-i.make_function_widget
+      autogenerate: true
+      display_name: Autogenerate Threshold
+    - command: napari-morans-i.make_qwidget
+      display_name: Example QWidget
+  menus:
+    napari/layers/segment:
+      - command: napari-morans-i.make_container_widget
+      - command: napari-morans-i.make_magic_widget
+      - command: napari-morans-i.make_function_widget
+      - command: napari-morans-i.make_qwidget

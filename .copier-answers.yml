@@ -1,0 +1,21 @@
+# Changes here will be overwritten by Copier; NEVER EDIT MANUALLY
+_commit: v2.1.2
+_src_path: https://github.com/napari/napari-plugin-template
+display_name: Moran's I Spatial Autocorrelation
+email: lukasjarzembowski@gmail.com
+full_name: Claude Opus 4.7 via Lukas Jarzembowski
+github_repository_url: https://github.com/lukasjarzembowski/napari-morans-i
+github_username_or_organization: lukasjarzembowski
+include_reader_plugin: false
+include_sample_data_plugin: true
+include_widget_plugin: true
+include_writer_plugin: false
+install_dependabot: true
+install_precommit: true
+license: BSD-3
+module_name: napari_morans_i
+plugin_name: napari-morans-i
+short_description: 'A simple plugin that computes Local Moran''s I spatial-autocorrelation
+    maps
+
+    of 2-D images in napari.'
