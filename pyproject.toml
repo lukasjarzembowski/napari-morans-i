@@ -1,8 +1,7 @@
 [project]
 name = "napari-morans-i"
 dynamic = ["version"]
-description = "A simple plugin that computes Local Moran's I spatial-autocorrelation maps
-of 2-D images in napari."
+description = "A simple plugin that computes Local Moran's I spatial-autocorrelation maps of 2-D images in napari."
 readme = "README.md"
 license = "BSD-3-Clause"
 license-files = ["LICENSE"]
@@ -31,10 +30,11 @@ requires-python = ">=3.10"
 # or any other Qt bindings directly (e.g. PyQt5, PySide2).
 # See best practices: https://napari.org/stable/plugins/building_a_plugin/best_practices.html
 dependencies = [
-    "numpy",
-    "magicgui",
-    "qtpy",
-    "scikit-image",
+    "numpy>=1.21",
+    "scipy>=1.7",
+    "magicgui>=0.7",
+    "qtpy>=2.0",
+    "napari",
 ]
 
 [project.optional-dependencies]
@@ -79,11 +79,15 @@ fallback_version = "0.0.1+nogit"
 
 [tool.pytest.ini_options]
 minversion = "6.0"
-addopts = ["-ra", "--showlocals", "--strict-markers", "--strict-config"]
+addopts = ["-ra", "--showlocals", "--strict-markers", "--strict-config", "--cov=napari_morans_i", "--cov-report=term-missing"]
 xfail_strict = true
 # filterwarnings = ["error"]  # recommended by PP309; deprecation warnings cause failures so leaving for the user to enable if desired
 log_cli_level = "INFO"
-testpaths = ["tests"]
+testpaths = ["src/napari_morans_i/_tests"]
+filterwarnings = [
+    "ignore::DeprecationWarning",
+    "ignore::PendingDeprecationWarning",
+]
 
 [tool.ruff]
 line-length = 79
@@ -109,4 +113,17 @@ select = [
 ignore = [
     "E501", # line too long. handled by formatter
     "UP006", "UP007", # type annotation. As using magicgui require runtime type annotation then we disable this.
+]
+
+[tool.coverage.run]
+source = ["napari_morans_i"]
+omit = ["*/_tests/*"]
+concurrency = ["thread"]
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "if TYPE_CHECKING:",
+    "raise NotImplementedError",
+    "if __name__ == .__main__.:",
 ]
