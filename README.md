@@ -23,7 +23,8 @@ used in:
 This code was entirely created using Claude Opus 4.7 (2026-05-06). Prompts have been archived in the ```prompts.txt``` file.
 
 ---
-
+## Demo
+![Demo of the plugin](demo.gif)
 ## Features
 
 - **Layer chooser** — operates on any 2-D `Image` layer in the current viewer.
