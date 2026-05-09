@@ -6,7 +6,7 @@ readme = "README.md"
 license = "BSD-3-Clause"
 license-files = ["LICENSE"]
 authors = [
-  {name = "Claude Opus 4.7 via Lukas Jarzembowski"},
+  {name = "Lukas Jarzembowski"},
   {email = "lukasjarzembowski@gmail.com"},
 ]
 classifiers = [
