@@ -17,8 +17,8 @@ It is a Python port of the MATLAB reference implementation
 [`moran_local.m`](https://github.com/dcsabaCD225/Moran_Matlab/blob/main/moran_local.m)
 used in:
 
-> Dávid Cs. *et al.*, **"Spatial gene expression patterns in the cortex…"**,
-> *eLife* (2024). [doi:10.7554/eLife.89361.1](https://doi.org/10.7554/eLife.89361.1)
+> Dávid Cs. *et al.*, **"An image segmentation method based on the spatial correlation coefficient of Local Moran’s I - identification of A-type potassium channel clusters in the thalamus"**,
+> *eLife* (2024). [https://doi.org/10.7554/eLife.89361.1](https://doi.org/10.7554/eLife.89361.2))
 
 This code was entirely created using Claude Opus 4.7 (2026-05-06). Prompts have been archived in the ```prompts.txt``` file.
 
@@ -204,7 +204,7 @@ return value to the `returned` signal (which adds the output layers).
 
 If you use this plugin in academic work, please cite both the original paper
 
-> Dávid Cs. *et al.* (2024). *eLife*, doi:10.7554/eLife.89361.1
+> Dávid Cs. *et al.* (2024). *eLife*, [doi:10.7554/eLife.89361.1](https://doi.org/10.7554/eLife.89361.2)
 
 and napari (Sofroniew *et al.*, 2022, doi:10.5281/zenodo.3555620).
 
